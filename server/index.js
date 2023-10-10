@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 db.defaults({ images: [] }).write();
-
+  
 app.get('/images', (req, res) => {
   const images = db.get('images').value();
   res.json(images);
